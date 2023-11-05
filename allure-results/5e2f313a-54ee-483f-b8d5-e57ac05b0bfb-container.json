@@ -1,0 +1,1 @@
+{"uuid":"5e2f313a-54ee-483f-b8d5-e57ac05b0bfb","name":"com.qa.selenium.test.login.SauceLoginTest","children":["61143a6f-806e-4a56-a04b-38021e11708c"],"befores":[{"name":"beforeClass","status":"broken","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1698828786033,"stop":1698828786034}],"afters":[],"start":1698828775329,"stop":1698828786095}

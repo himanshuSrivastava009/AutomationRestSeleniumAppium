@@ -1,0 +1,53 @@
+  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(""))));
+
+        Wait<WebDriver> fluentWaitwait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofSeconds(2))
+                .ignoring(NoSuchElementException.class);
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(By.xpath(""))).clickAndHold()
+                .moveToElement(driver.findElement(By.xpath("")))
+                .release()
+                .build()
+                .perform();
+
+        actions.sendKeys(driver.findElement(By.xpath("")), "Himanshu").perform();
+
+        //SelectByValue
+        //SelectByVisibleText
+        //SelectByID
+
+        driver.switchTo().alert();
+        driver.switchTo().alert().accept();
+        driver.switchTo().alert().dismiss();
+        driver.switchTo().alert().sendKeys("Done");
+        driver.switchTo().alert().getText();
+
+        driver.manage().window().maximize();
+
+        ChromeOptions options = new ChromeOptions();
+        options.setPageLoadTimeout(Duration.ofSeconds(20));
+        options.setCapability("", "");
+        options.setAcceptInsecureCerts(true);
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        options.addArguments("--ignore-certificate-errors");
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("", "");
+
+        File screenshotAs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        String destinationPath = "";
+        Files.copy(screenshotAs.toPath(), new File(destinationPath).toPath());
+
+        driver.findElement(By.xpath("")).isDisplayed();
+        driver.findElement(By.xpath("")).isEnabled();
+        driver.findElement(By.xpath("")).isSelected();
+
+        actions.contextClick(driver.findElement(By.xpath(""))).build().perform();
+       WebElement element = driver.findElement(By.xpath("//ul[@class='context-menu-list context-menu-root']/li/span[contains(text(),'')]"));
+        element.click();
