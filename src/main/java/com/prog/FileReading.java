@@ -16,6 +16,15 @@ public class FileReading {
 
         PrintWriter printWriter = new PrintWriter("/Users/swati/Documents/HimashuRestAssured/AutomationRestSelenium/testCreate.txt");
 
+        System.out.println("Creating Merge Conflict");
+
+        System.out.println("Himanshu created this line");
+
+
+      //  PrintWriter printWriter = new PrintWriter("/Users/swati/Documents/HimashuRestAssured/AutomationRestSelenium/testCreate.txt");
+
+        //Comment on this file
+
         Scanner sc = new Scanner(System.in);
        // file.getMessage();
        while(br.readLine()!=null){
