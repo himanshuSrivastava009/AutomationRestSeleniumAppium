@@ -16,6 +16,7 @@ public class FileReading {
 
         PrintWriter printWriter = new PrintWriter("/Users/swati/Documents/HimashuRestAssured/AutomationRestSelenium/testCreate.txt");
 
+        //Comment on this file
         Scanner sc = new Scanner(System.in);
        // file.getMessage();
        while(br.readLine()!=null){
