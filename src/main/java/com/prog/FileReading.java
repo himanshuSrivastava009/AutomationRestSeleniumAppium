@@ -8,7 +8,11 @@ public class FileReading {
     public static void readFile(BufferedReader br) throws IOException, EmptyFile {
 
         EmptyFile file = new EmptyFile();
+
         System.out.println("Himanshu created this line");
+
+
+        System.out.println("Creating Merge Conflict");
 
         PrintWriter printWriter = new PrintWriter("/Users/swati/Documents/HimashuRestAssured/AutomationRestSelenium/testCreate.txt");
 
