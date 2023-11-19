@@ -1,14 +1,18 @@
 package com.prog;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class FileReading {
 
     public static void readFile(BufferedReader br) throws IOException, EmptyFile {
 
         EmptyFile file = new EmptyFile();
+        System.out.println("Himanshu created this line");
+
         PrintWriter printWriter = new PrintWriter("/Users/swati/Documents/HimashuRestAssured/AutomationRestSelenium/testCreate.txt");
 
+        Scanner sc = new Scanner(System.in);
        // file.getMessage();
        while(br.readLine()!=null){
 
