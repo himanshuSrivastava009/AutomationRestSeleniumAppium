@@ -1,7 +1,7 @@
 package com.qa.selenium.base.test;
 
 import com.qa.selenium.base.BasePage;
-import com.qa.selenium.elementutil.ElementsUtil;
+
 import com.qa.selenium.home.HomePage;
 import com.qa.selenium.login.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +25,7 @@ public class BaseTest {
 
         System.out.println("In Base Test , @Before Class");
         basePage = new BasePage();
-        driver = basePage.initDriver("Chrome");
+        driver = basePage.initDriver("firefox");
         prop = basePage.initProperties();
         loginPage = new LoginPage(driver, prop);
         homePage = new HomePage(driver);

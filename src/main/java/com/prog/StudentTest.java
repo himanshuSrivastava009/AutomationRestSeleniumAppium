@@ -21,7 +21,7 @@ public class StudentTest implements Comparable<StudentTest>{
     @Override
     public int compareTo(StudentTest s1) {
         StudentTest st2 = this;
-        if(s1.marks>st2.marks){
+        if(s1.age>st2.age){
 
             return 1;
         } else  {

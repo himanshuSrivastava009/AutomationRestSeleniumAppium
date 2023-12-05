@@ -1,6 +1,7 @@
 package com.qa.selenium.test.checkout;
 
 import com.qa.selenium.base.test.BaseTest;
+
 import com.qa.selenium.checkout.CheckoutPage;
 import org.testng.annotations.Test;
 
@@ -9,8 +10,8 @@ import java.util.Map;
 
 public class CheckoutTest extends BaseTest {
 
-    CheckoutPage checkoutPage;
-    HashMap<String, String> status;
+    public CheckoutPage checkoutPage;
+   public  HashMap<String, String> status;
 
     @Test(priority = 1, description = "proceed to checkout after adding all the products to the cart")
     public void performCheckout() {
@@ -46,6 +47,8 @@ public class CheckoutTest extends BaseTest {
     public void backToHomePage(){
 
         System.out.println(checkoutPage.backToHomeAfterOderIsCompleted());
+
+
     }
 
 }

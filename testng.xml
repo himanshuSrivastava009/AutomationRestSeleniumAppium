@@ -8,5 +8,19 @@
       <class name="com.qa.selenium.test.checkout.CheckoutTest"/>
 
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+<!--  </test> &lt;!&ndash; Test &ndash;&gt;-->
+<!--</suite> &lt;!&ndash; Suite &ndash;&gt;-->
+
+
+<!--<suite name="ParallelTests" parallel="tests">-->
+<!--&lt;!&ndash;  <test name="ChromeTest">&ndash;&gt;-->
+<!--&lt;!&ndash;    <classes>&ndash;&gt;-->
+<!--&lt;!&ndash;      <class name="com.qa.selenium.docker.ChromeTest"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </classes>&ndash;&gt;-->
+<!--&lt;!&ndash;  </test>&ndash;&gt;-->
+<!--  <test name="FirefoxTest">-->
+<!--    <classes>-->
+<!--      <class name="com.qa.selenium.docker.FirefoxTest"/>-->
+<!--    </classes>-->
+  </test>
+</suite>

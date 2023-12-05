@@ -1,10 +1,14 @@
 package com.qa.selenium.test.login;
 
 import com.qa.selenium.base.test.BaseTest;
+import com.qa.selenium.base.test.TestListener;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+
+@Listeners (TestListener.class)
 
 public class SauceLoginTest extends BaseTest {
 

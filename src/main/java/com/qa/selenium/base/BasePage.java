@@ -6,12 +6,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.time.Duration;
 import java.util.HashMap;
@@ -27,16 +31,25 @@ public class BasePage implements BasePageInterface {
     public static ElementsUtil elementsUtil;
 
     @Override
-    public WebDriver initDriver(String browserName) {
+    public WebDriver initDriver(String browserName) throws MalformedURLException {
 
         if (browserName.equalsIgnoreCase("Chrome")) {
 
 
-            driver = new ChromeDriver();
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setBrowserName("chrome");
+            //  capabilities.setVersion("latest");
+            URL gridUrl = new URL("http://localhost:4444/wd/hub");
+            driver = new RemoteWebDriver(gridUrl, capabilities);
         } else if (browserName.equalsIgnoreCase("fireFox")) {
 
 
-            driver = new FirefoxDriver();
+            //driver = new FirefoxDriver();
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setBrowserName("firefox");
+            //  capabilities.setVersion("latest");
+            URL gridUrl = new URL("http://localhost:4444/wd/hub");
+            driver = new RemoteWebDriver(gridUrl, capabilities);
         }
 
         driver.manage().window().maximize();
